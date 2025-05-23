@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <link rel="stylesheet" href="./style-crono.css">
+
+</head>
+<body>
+   
+    
+
+    <div class="timer"> 
+        <div id="circle">
+        </div>   
+        <div id="position-1">00:</div>
+        <div id="position-2">00:</div>
+        <div id="position-3">00</div>
+    </div>
+    
+   
+    
+    <div class="cronometer">
+        <div class="input-timer">
+            <legend>Horas</legend>
+            <input 
+            type="number"
+            id="hour"
+            oninput="numberLimiter(this, 2)"
+            value= 0
+            max="99"
+            min="00">
+        </div>
+
+        <div class="input-timer">
+            <legend id="leg2">Minutos</legend>
+            <input 
+            type="number" 
+            id="minute"
+            oninput="numberLimiter(this, 2)"
+            value= 0
+            max="59"
+            min="0">
+        </div>
+
+        <div class="input-timer">
+            <legend>Segundos</legend>
+            <input
+            type="number" 
+            id="second"
+            oninput="numberLimiter(this, 2)"
+            value= 0
+            max="59"
+            min="0">
+        </div>
+    </div>
+    
+<div class="buttons">
+    <input
+        type="button" 
+        id="initial"
+        value="Iniciar"
+    onclick="countDown(), hideSelector()">
+    <input
+    type="button" 
+    id="continue"
+    value="Retomar"
+    onclick="countDown()">
+    <input 
+    type="button" 
+    id="pause"
+    value="Pausar"
+    onclick="pauseTimer()">
+
+    <br>
+
+    <input 
+    type="button"  
+    id="erase"
+    value="Excluir"
+    onclick="reloadPage()">
+</div>
+
+</fieldset>
+    <script 
+    src="./crono.js">
+    </script>
+</body>
+</html>
