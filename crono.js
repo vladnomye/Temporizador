@@ -95,6 +95,7 @@ function countDown(){
   //Fim Constante Segundos
   if(hours.value == 0 && minutes.value == 0 && seconds.value == 0){
     clearInterval(amor);
+    hideCricle();
     hh.innerHTML = "Timer Finalizado";
     mm.innerHTML = "";
     ss.innerHTML = "";
